@@ -3,8 +3,8 @@ presimental
 
 A toy app for doing sentiment analysis on Tweets mentioning Obama and Romney.
 
-Setup
------
+Install
+-------
 
 1. sudo apt-get install node
 1. get some Twitter credentials at [dev.twitter.com](http://dev.twitter.com)
