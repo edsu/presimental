@@ -1,0 +1,17 @@
+{
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "name": "presimental",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "latest",
+    "socket.io": "latest",
+    "underscore": "latest",
+    "ntwitter": "latest",
+    "jsonconfig": "latest",
+    "Sentimental": "latest"
+  }
+}

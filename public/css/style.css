@@ -1,0 +1,127 @@
+body {
+    font-family: sans-serif;
+    font-size: 10pt;
+    padding: 2em 1em 2em 70px;
+    margin: 0;
+    color: black;
+    background: white;
+}
+
+body > header {
+    text-align: center;
+    width: 335px;
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+body > header h1 {
+    font-size: 24pt;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+div#pause {
+    color: red;
+    font-style: italic;
+}
+
+.count {
+    font-weight: bold;
+    font-size: 28pt;
+    margin-left: 30px;
+    float: left;
+}
+
+.average {
+    font-weight: bold;
+    font-size: 28pt;
+    margin-left: 30px;
+    text-align: right;
+}
+
+#obama {
+    width: 35%;
+    height: 100%;
+    float: left;
+    margin-left: 10%;
+}
+
+#romney {
+    width: 35%;
+    height: 100%;
+    float: right;
+    margin-right: 10%;
+}
+
+header.column {
+    padding: 20px;
+    border-bottom: thin solid #cccccc;
+    height: 40px;
+}
+
+header .count {
+    margin-left: 30px;
+}
+    
+article.tweet {
+    padding: 20px;
+    clear: both;
+    display: block;
+    border-bottom: thin solid #cccccc;
+}
+
+div.clearUpdate {
+    font-size: 0px;
+    line-height: 0px;
+    clear: both;
+}
+
+article header {
+    margin-bottom: 10px;
+    height: 45px;
+    font-weight: bold;
+}
+
+article footer {
+    margin-top: 10px;
+    font-size: 11pt;
+}
+
+div.created {
+    float: left;
+}
+
+div.sentiment {
+    text-align: right;
+}
+
+div.sentiment.positive {
+    color: lightgreen;
+}
+
+div.sentiment.negative {
+    color: red;
+}
+
+div.average.negative {
+    color: red;
+}
+
+div.average.positive {
+    color: lightgreen;
+}
+
+img.avatar {
+    vertical-align: middle;
+    float: left;
+    margin-right: 10px;
+    border-radius: 5px;
+    height: 45px;
+}
+
+a {
+  text-decoration: none;
+}

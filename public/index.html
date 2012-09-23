@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>presimental</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/underscore-min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/mustache.js"></script>
+    <script src="/js/jquery.hotkeys.js"></script>
+    <script src="/js/app.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'> 
+    </head>
+    <body>
+
+        <a href="http://github.com/edsu/presimental"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub" /></a> 
+
+        <header>
+            <h1>presimental</h1>
+            Sentiment analysis for tweets about Obama and Romney
+            using <a href="http://nodejs.org">NodeJS</a>, 
+            <a href="http://socket.io">SocketIO</a>
+            and <a href="https://github.com/thinkroth/Sentimental">Sentimental</a>.
+            If you want to reset the counters and averages just reload the page.
+            And if you'd like to pause the stream, type "p".
+            <br>
+            <br>
+        <div id="pause">&nbsp;</div>
+        </header>
+
+
+        <section id="obama">
+        <header class="column">
+            <img class="avatar" src="https://twimg0-a.akamaihd.net/profile_images/2325704772/wrrmef61i6jl91kwkmzq_reasonably_small.png"> 
+            <div class="count"></div>
+            <div title="the average of Sentimental's analyze command on the text of all the tweets mentioning Obama" class="average"></div>
+        </header>
+        </section>
+
+        <section id="romney">
+        <header class="column">
+            <img class="avatar" src="https://twimg0-a.akamaihd.net/profile_images/2624978379/chw1hdzozfdew973pvjr_normal.png"> 
+            <div class="count"></div>
+            <div title="the average of Sentimental's analyze command on the text of all the tweets mentioning Romney" class="average"></div>
+        </header>
+        </section>
+
+        <script id="tweet-template" type="text/x-mustache-template">
+        <article class="tweet">
+            <header>
+                <a href="http://twitter.com/{{ user }}">
+                    <img class="avatar" src="{{ avatar }}">
+                </a>
+                <span class="name">{{ name }}</span>
+                <br>
+                <span class="user">
+                    <a href="http://twitter.com/{{ user }}">{{ user }}</a>
+                </span>
+            </header>
+            <div class="text">
+                {{{ textWithLinks }}}
+            </div>
+            <footer>
+                <div class="created">
+                    <a href="{{ url }}">{{ created }}</a>
+                </div>
+                <div class="sentiment {{ sentimentClass }}">
+                    {{ score }} 
+                </div>
+            </footer>
+        </article>
+        </script>
+    </body>
+</html>
