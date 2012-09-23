@@ -8,7 +8,9 @@ var fs = require('fs'),
     socketio = require('socket.io'),
     sentimental = require('Sentimental');
 
-config.load(['config.json']);
+path.exists("config.json", function(exists) {
+  if (exists) config.load(['config.json']);
+});
 
 function main() {
   var app = express();
