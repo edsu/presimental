@@ -30,11 +30,10 @@ div#pause {
 
 table.runningStats {
     width: 85%;
-    border: thin solid #eeeeee;
 }
 
 .runningStats th {
-    font-size: 10pt;
+    font-size: 8pt;
     font-style: italic;
     margin-bottom: 0px;
     text-align: right;
@@ -45,6 +44,7 @@ table.runningStats {
     font-weight: bold;
     font-size: 18pt;
     text-align: right;
+    padding: 0px;
 }
 
 #obama {
