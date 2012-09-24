@@ -42,8 +42,9 @@ div#pause {
 }
 
 .runningStats th {
-    font-size: 8pt;
+    font-size: 10pt;
     font-style: italic;
+    margin-bottom: 0px;
 }
 
 .runningStats td {
@@ -69,7 +70,7 @@ div#pause {
 header.column {
     padding: 20px;
     border-bottom: thin solid #cccccc;
-    height: 40px;
+    height: 60px;
 }
 
 header .count {
