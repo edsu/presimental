@@ -37,7 +37,6 @@ div#pause {
 
 table.runningStats {
     width: 85%;
-    padding-left: 30px;
     border: thin solid #eeeeee;
 }
 
@@ -51,7 +50,7 @@ table.runningStats {
 
 .runningStats td {
     font-weight: bold;
-    font-size: 20pt;
+    font-size: 18pt;
     text-align: right;
 }
 
