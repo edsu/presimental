@@ -38,6 +38,7 @@ div#pause {
 .runningStats table {
     width: 100%;
     padding-left: 30px;
+    border: thin solid #eeeeee;
 }
 
 .runningStats th {
