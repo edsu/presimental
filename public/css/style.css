@@ -40,6 +40,11 @@ div#pause {
     padding-left: 30px;
 }
 
+.runningStats th {
+    font-size: 10pt;
+    font-style: italic;
+}
+
 .runningStats td {
     font-weight: bold;
     font-size: 28pt;
