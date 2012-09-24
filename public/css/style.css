@@ -35,12 +35,15 @@ div#pause {
     float: left;
 }
 
+.runningStats table {
+    width: 100%;
+    padding-left: 30px;
+}
+
 .runningStats td {
     font-weight: bold;
     font-size: 28pt;
-    margin-left: 30px;
     text-align: right;
-    width: 100%;
 }
 
 #obama {
