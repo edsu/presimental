@@ -46,6 +46,7 @@ table.runningStats {
     font-style: italic;
     margin-bottom: 0px;
     text-align: right;
+    width: 33%;
 }
 
 .runningStats td {
