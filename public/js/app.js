@@ -54,10 +54,13 @@ function addTweet(tweet) {
   $("#obama header .count").text(obamaCount);
   $("#romney header .count").text(romneyCount);
 
-  // update average
+  // update scores
+  $("#obama header .score").text(obamaScore);
+  $("#romney header .score").text(romneyScore);
+
+  // update averages
   var obamaAvg = avg(obamaScore, obamaCount);
   $("#obama header .average").text(obamaAvg);
-
   var romneyAvg = avg(romneyScore, romneyCount);
   $("#romney header .average").text(romneyAvg);
 
