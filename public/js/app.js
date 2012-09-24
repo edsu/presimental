@@ -1,6 +1,3 @@
-var tweetTemplate = _.template('<article class="tweet"><header><a href="http://twitter.com/<%= user %>"><img class="avatar" src="<%= avatar %>"></a><span class="name"><%= name %></span><br><span class="user"><a href="http://twitter.com/<%= user %>"><%= user %></a></span></header><div class="text"><%= textWithLinks %></div><footer><div class="created"><a href="<%= url %>"><%= created %></a></div><div class="sentiment <%= sentimentClass %>"><%= score %></div></footer></article>');
-
-
 function main() {
   romneyCount = 0;
   romneyScore = 0;
@@ -31,8 +28,6 @@ function addTweet(tweet) {
   } else {
     tweet.sentimentClass = "neutral";
   }
-
-  //var item = $(tweetTemplate(tweet));
 
   var item = $(Mustache.render(tweetTemplate, tweet));
   var obama = tweet.text.match(/obama/i);
