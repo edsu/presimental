@@ -64,7 +64,7 @@ function addTweet(tweet) {
   var romneyAvg = avg(romneyScore, romneyCount);
   $("#romney header .average").text(romneyAvg);
 
-  updateAverageClasses();
+  updateCumulativeClasses();
 
   // remove old updates so the DOM doesn't bloat memory when 
   // someone leaves their browser open :-)
@@ -92,10 +92,11 @@ function togglePause() {
   }
 }
 
-function updateAverageClasses(who, avg) {
+function updateCumulativeClasses() {
   ["obama", "romney"].forEach(function (s) {
-    var e = $("#" + s + " header .average");
-    var avg = parseFloat(e.text())
+    var id = "#" + s;
+    var e = $(id + " header .cumulativeStats");
+    var avg = parseFloat($(id + " .average").text())
     if (avg > 0) {
       e.removeClass("negative");
       e.addClass("positive");
