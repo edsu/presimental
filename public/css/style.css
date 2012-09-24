@@ -38,6 +38,7 @@ table.runningStats {
     margin-bottom: 0px;
     text-align: right;
     width: 33%;
+    color: #555555;
 }
 
 .runningStats td {
