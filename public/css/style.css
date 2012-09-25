@@ -76,6 +76,11 @@ article.tweet {
     clear: both;
     display: block;
     border-bottom: thin solid #cccccc;
+    height: 120px;
+}
+
+article.tweet .text {
+    height: 50px;
 }
 
 div.clearUpdate {
@@ -92,7 +97,7 @@ article header {
 
 article footer {
     margin-top: 10px;
-    font-size: 11pt;
+    font-size: 10pt;
 }
 
 div.created {
