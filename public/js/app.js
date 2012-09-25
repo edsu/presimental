@@ -101,7 +101,7 @@ function togglePause() {
 function shade() {
   ["obama", "romney"].forEach(function (candidate) {
     ["average", "score"].forEach(function (valueType) {
-      var e = $("#" + candidate + " " + valueType);
+      var e = $("#" + candidate + " ." + valueType);
       var value = parseFloat(e.text())
       if (value > 0) {
         e.removeClass("negative");
