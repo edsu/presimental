@@ -48,14 +48,14 @@ table.runningStats {
 }
 
 #obama {
-    width: 35%;
+    width: 400px;
     height: 100%;
     float: left;
     margin-left: 10%;
 }
 
 #romney {
-    width: 35%;
+    width: 400px;
     height: 100%;
     float: right;
     margin-right: 10%;
