@@ -34,6 +34,7 @@ function addTweet(tweet) {
   var romney = tweet.text.match(/romney/i);
 
   if (obama && romney) {
+    item.addClass("both");
     $("#obama header.column").after(item);
     $("#romney header.column").after(item.clone());
     romneyCount += 1;
