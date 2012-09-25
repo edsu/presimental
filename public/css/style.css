@@ -103,19 +103,11 @@ div.sentiment {
     text-align: right;
 }
 
-div.sentiment.positive {
-    color: lightgreen;
-}
-
-div.sentiment.negative {
+.negative {
     color: red;
 }
 
-div.average.negative {
-    color: red;
-}
-
-div.average.positive {
+.positive {
     color: lightgreen;
 }
 
