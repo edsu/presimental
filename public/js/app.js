@@ -34,6 +34,7 @@ function addTweet(tweet) {
   var romney = tweet.text.match(/romney/i);
 
   if (obama && romney) {
+    item.addClass("both");
     $("#obama header.column").after(item);
     $("#romney header.column").after(item.clone());
     romneyCount += 1;
@@ -64,7 +65,7 @@ function addTweet(tweet) {
   var romneyAvg = avg(romneyScore, romneyCount);
   $("#romney header .average").text(romneyAvg);
 
-  updateRunningClasses();
+  shade();
 
   // remove old updates so the DOM doesn't bloat memory when 
   // someone leaves their browser open :-)
@@ -92,21 +93,28 @@ function togglePause() {
   }
 }
 
-function updateRunningClasses() {
-  ["obama", "romney"].forEach(function (s) {
-    var id = "#" + s;
-    var e = $(id + " header .runningStats");
-    var avg = parseFloat($(id + " .average").text())
-    if (avg > 0) {
-      e.removeClass("negative");
-      e.addClass("positive");
-    } else if (avg == 0) {
-      e.removeClass("negative");
-      e.removeClass("positive");
-    } else if (avg < 0) {
-      e.removeClass("positive");
-      e.addClass("negative");
-    }
+/**
+ * color the total and average sentiment values for each candidate green 
+ * or red depending on whether they are positive or negative. It feels 
+ * like there should be an easier way to do this :-)
+ */
+
+function shade() {
+  ["obama", "romney"].forEach(function (candidate) {
+    ["average", "score"].forEach(function (valueType) {
+      var e = $("#" + candidate + " ." + valueType);
+      var value = parseFloat(e.text())
+      if (value > 0) {
+        e.removeClass("negative");
+        e.addClass("positive");
+      } else if (value == 0) {
+        e.removeClass("negative");
+        e.removeClass("positive");
+      } else if (value < 0) {
+        e.removeClass("positive");
+        e.addClass("negative");
+      }
+    });
   });
 }
 

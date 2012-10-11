@@ -29,7 +29,7 @@ div#pause {
 }
 
 table.runningStats {
-    width: 85%;
+    width: 80%;
 }
 
 .runningStats th {
@@ -49,14 +49,14 @@ table.runningStats {
 }
 
 #obama {
-    width: 35%;
+    width: 400px;
     height: 100%;
     float: left;
     margin-left: 10%;
 }
 
 #romney {
-    width: 35%;
+    width: 400px;
     height: 100%;
     float: right;
     margin-right: 10%;
@@ -77,6 +77,11 @@ article.tweet {
     clear: both;
     display: block;
     border-bottom: thin solid #cccccc;
+    height: 120px;
+}
+
+article.tweet .text {
+    height: 50px;
 }
 
 div.clearUpdate {
@@ -93,7 +98,7 @@ article header {
 
 article footer {
     margin-top: 10px;
-    font-size: 11pt;
+    font-size: 10pt;
 }
 
 div.created {
@@ -104,19 +109,11 @@ div.sentiment {
     text-align: right;
 }
 
-div.sentiment.positive {
-    color: lightgreen;
-}
-
-div.sentiment.negative {
+.negative {
     color: red;
 }
 
-div.average.negative {
-    color: red;
-}
-
-div.average.positive {
+.positive {
     color: lightgreen;
 }
 
@@ -131,3 +128,8 @@ img.avatar {
 a {
   text-decoration: none;
 }
+
+.both {
+    background-color: #F8F8FF;
+}
+
